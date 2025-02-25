@@ -1,12 +1,11 @@
-//fix stackoverflow
 
 public int segLength = 50;
 public int numClicked = 0;
 
 public void setup() {
   size(800, 800);
+  frameRate(3);
   background(#003E0A);
-  noLoop();
 }
 
 public void draw() {
@@ -16,9 +15,9 @@ public void draw() {
     background(#003E0A);
     numClicked = 0;
   }
+  numClicked++;
 }
 
 public void mousePressed() {
-  numClicked++;
   redraw();
 }
